@@ -18,7 +18,7 @@ React, Express, Node, Mongoose, Bootstrap, HTML, CSS, Heroku
 
 ![wireframeList](public/wireframe1.jpg)
 ![wireframeAdd](public/wirefram2.jpg)
-![Trello](public/readme.jpg)
+![Trello](public/Readme.jpg)
 
 ## Next Steps:
 
