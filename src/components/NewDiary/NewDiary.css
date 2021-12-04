@@ -1,0 +1,73 @@
+/* .background{
+  background: url('../images/diarynote.jpg');
+  background-repeat: no-repeat;
+  background-size: 110%;
+} */
+
+.background{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.newdiary {
+  background: url('../images/diary2.jpg');
+  background-repeat: no-repeat;
+  background-size: 160%;
+  background-position: center;
+  /* background-color: rgb(170, 201, 190); */
+  /* margin-left: 15px; */
+  margin-top: 50px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  padding: 16px;
+  height: 620px;
+  display: flex;
+  align-items: center;
+  /* flex-direction: column;
+  justify-content: space-between; */
+  width: 550px;
+  font-family: 'Cabin Sketch', cursive;
+  }
+
+.titlename {
+  margin-top: 10px;
+  margin-bottom: 8px;
+  border: none;
+  background-color: rgb(222, 222, 222);
+}  
+
+.date {
+  margin-bottom: 8px;
+  border: none;
+  background-color: rgb(222, 222, 222);
+}
+
+textarea {
+  margin-bottom: 8px;
+  border: none;
+  resize: none;
+  background-color: rgb(222, 222, 222);
+}
+
+.btn {
+  border: none;
+  margin-top: 10px;
+  background-color: rgb(252, 246, 233);
+}
+
+.btn:hover {
+  background-color: #778899;
+}
+
+.canvas{
+  border: none;
+  /* opacity: 90%; */
+}
+/* .canvasbtn{
+  width: 55px;
+  height: 20px;
+  float: right;
+  border: none;
+  background-color: rgb(250, 242, 226);
+} */

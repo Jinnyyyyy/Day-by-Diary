@@ -1,0 +1,14 @@
+.image {
+    /* background: url('./home.jpg'); */
+    background-repeat: no-repeat;
+    /* background-size: auto; */
+    background-position: center;
+    width: 1400px;
+    height: 800px;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

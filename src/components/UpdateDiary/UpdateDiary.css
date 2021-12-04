@@ -1,0 +1,13 @@
+.diary{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 640px;
+    padding: 60px;
+}
+
+.diary h3{
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 25px;
+}
+
