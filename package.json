@@ -6,13 +6,11 @@
     "start": "node ./bin/www",
     "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
   },
-
   "engines": {
     "node": "14.17.4"
   },
-
   "dependencies": {
-    "bcryptjs": "^5.0.1",
+    "bcryptjs": "^2.4.3",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
     "debug": "~2.6.9",
