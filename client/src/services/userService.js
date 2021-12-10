@@ -1,5 +1,5 @@
 import tokenService from './tokenService'
-const BASE_URL = 'http://localhost:3000/api/users'
+const BASE_URL = 'https://daybydiary.herokuapp.com/'
 
 function signup(user){
     return fetch(`${BASE_URL}/signup`, {
