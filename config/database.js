@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect("mongodb+srv://sei:12345@sei.mu3p9.mongodb.net/daybydiary?retryWrites=true&w=majority",
+mongoose.connect(process.env.DATABASE_URL,
   { useNewUrlParser: true }
 );
 
