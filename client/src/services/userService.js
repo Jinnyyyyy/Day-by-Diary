@@ -2,7 +2,7 @@ import tokenService from './tokenService'
 const BASE_URL = 'https://daybydiary.herokuapp.com'
 
 function signup(user){
-    return fetch(`${BASE_URL}/signup`, {
+    return fetch(`${BASE_URL}/api/users/signup`, {
         method: 'POST',
         headers: new Headers({'Content-Type': 'application/json'}),
         body: JSON.stringify(user)
@@ -15,7 +15,7 @@ function signup(user){
 }
 
 function login(credentials){
-    return fetch(`${BASE_URL}/login`, {
+    return fetch(`${BASE_URL}/api/users/login`, {
         method: 'POST',
         headers: new Headers({'Content-Type': 'application/json'}),
         body: JSON.stringify(credentials)
