@@ -8,7 +8,7 @@ const cors = require('cors');
 require('./config/database');
 require('dotenv').config()
 
-var indexRouter = require('./routes/index');
+
 var diarysRouter = require('./routes/diarys');
 const usersRouter = require('./routes/users');
 var app = express();
@@ -29,7 +29,7 @@ app.use(cors({
 )
 
 
-app.use('/', indexRouter);
+
 app.use('/diarys', diarysRouter);
 app.use("/diarys", require("./routes/diarys.js"));
 app.use('/api/users', usersRouter);
