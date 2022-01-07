@@ -8,7 +8,7 @@ const cors = require('cors');
 require('./config/database');
 require('dotenv').config()
 
-var indexRouter = require('./routes/index');
+
 var diarysRouter = require('./routes/diarys');
 const usersRouter = require('./routes/users');
 var app = express();
@@ -22,6 +22,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "client", "build", "public")))
+app.use(express.static(__dirname + '/client/build'))
+
 
 app.use(cors({
     origin: '*',
@@ -29,14 +31,14 @@ app.use(cors({
 )
 
 
-app.use('/', indexRouter);
+// app.use('/', indexRouter);
 app.use('/diarys', diarysRouter);
 app.use("/diarys", require("./routes/diarys.js"));
 app.use('/api/users', usersRouter);
 
 
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+app.get("/*", (req, res) => {
+  res.sendFile(path.resolve(__dirname,'./client/build',"index.html"));
 });
 
 // catch 404 and forward to error handler

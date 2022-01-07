@@ -25,3 +25,6 @@ React, Express, Node, Mongoose, Bootstrap, HTML, CSS, Heroku
 - Upload images/assets to AWS S3
 - Add drawing tools
 - Add emoji or sticker 
+
+
+## Heroku:
