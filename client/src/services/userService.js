@@ -1,21 +1,25 @@
 import tokenService from './tokenService'
-const BASE_URL = 'https://daybydiary.herokuapp.com'
+// const BASE_URL = 'https://daybydiary.herokuapp.com'
+const BASE_URL = 'http://localhost:3001'
 
-function signup(user){
-    return fetch(`${BASE_URL}/api/users/signup`, {
+
+function signup(user) {
+    console.log(user)
+    return fetch(`/api/users/signup`, {
         method: 'POST',
         headers: new Headers({'Content-Type': 'application/json'}),
         body: JSON.stringify(user)
     })
     .then(res => {
         if (res.ok) return res.json()
+        console.log(res)
         throw new Error('Email already taken')
     })
     .then( ({token}) => tokenService.setToken(token))
 }
 
 function login(credentials){
-    return fetch(`${BASE_URL}/api/users/login`, {
+    return fetch(`/api/users/login`, {
         method: 'POST',
         headers: new Headers({'Content-Type': 'application/json'}),
         body: JSON.stringify(credentials)

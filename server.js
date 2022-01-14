@@ -24,7 +24,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "client", "build", "public")))
 app.use(express.static(__dirname + '/client/build'))
 
-
+// app.options('/', cors())
 app.use(cors({
     origin: '*',
   })
@@ -33,7 +33,7 @@ app.use(cors({
 
 // app.use('/', indexRouter);
 app.use('/diarys', diarysRouter);
-app.use("/diarys", require("./routes/diarys.js"));
+// app.use("/diarys", require("./routes/diarys.js"));
 app.use('/api/users', usersRouter);
 
 

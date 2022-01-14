@@ -1,20 +1,20 @@
 const User = require('../models/user')
 const jwt = require('jsonwebtoken')
+require('dotenv').config()
 const SECRET = process.env.SECRET
 
-async function signup(req, res){
-    //create an instance of user model with data from req.body
-    const user = new User(req.body)
-    try{
-        //save user instance
-        await user.save()
-        //create token using the createJWT function and return it to the client
-        const token = createJWT(user)
-        res.json({ token })
-    }catch(err){
-        res.status(400).json(err)
+async function signup(req, res) {
+    console.log('reached signup')
+    const user = new User(req.body);
+    if (user){
+      await user.save();
+      const token = createJWT(user);
+      res.json({ token });
+      console.log(token)
+    }else{
+      res.status(400).json(err);
     }
-}
+  }
 
 async function login(req, res){
     try{

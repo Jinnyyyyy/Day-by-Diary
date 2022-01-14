@@ -1,27 +1,27 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import style from './UpdateDiary.css'
-import { useParams, useHistory } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 // import { ReactSketchCanvas } from 'react-sketch-canvas';
 
 function UpdateDiary(props) {
-    const history = useHistory()
+    // const history = useHistory()
     const { id } = useParams();
-    const [editedDiary, setEditedDiary] = useState('')
+    // const [editedDiary, setEditedDiary] = useState('')
     const [postData, setPostData] = useState({ title: '', text: '', date: '' })
 
-    // useEffect(() => {
-    //     if(diary)setpostdata(diary)
-    // },[diary]) 
+    // // useEffect(() => {
+    // //     if(diary)setpostdata(diary)
+    // // },[diary]) 
 
-    const handleNameChange = (event) => {
-        setEditedDiary(event.target.value)
-    }
+    // const handleNameChange = (event) => {
+    //     setEditedDiary(event.target.value)
+    // }
 
-    const handleFormSubmit = async (event) => {
-        // event.preventDefault();
-        history.push('/Diary')
+    // const handleFormSubmit = async (event) => {
+    //     // event.preventDefault();
+    //     history.push('/Diary')
 
-    }
+    // }
 
     const handleUpdateDiary = (event, id) => {
         // event.preventDefault()
