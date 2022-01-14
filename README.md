@@ -29,4 +29,4 @@ React, Express, Node, Mongoose, Bootstrap, HTML, CSS, Heroku
 
 ## Heroku:
 
-https://daybydiary.herokuapp.com/Diary
+https://daybydiary.herokuapp.com/
